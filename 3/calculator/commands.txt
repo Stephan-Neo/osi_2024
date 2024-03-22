@@ -1,0 +1,15 @@
+./sin_calculator &
+
+nice -n -20 ./cos_calculator &
+
+pgrep -f cos_calculator
+
+sudo renice -n 19 -p [PID]
+
+pgrep -f sin_calculator
+
+sudo renice -n -20 -p [PID]
+
+ps -eo pid,pmem,etime,tty,start,cmd | grep sin_calculator
+
+ps -eo pid,pmem,etime,tty,start,cmd | grep cos_calculator
