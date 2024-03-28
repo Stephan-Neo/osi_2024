@@ -1,0 +1,2 @@
+sudo shutdown -r +1 "Тестовая перезагрузка через 1 минуту"
+sudo shutdown -c
